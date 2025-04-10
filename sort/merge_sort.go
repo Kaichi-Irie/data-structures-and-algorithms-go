@@ -1,11 +1,12 @@
 package sort
 
 /*
-MergeSort sort the array arr[p, r)
+MergeSort sort the array arr[p, r).
+n = r-p
 worst time complexity: O(nlogn)
 average time complexity: O(nlogn)
 best time complexity: O(nlogn)
-space complexity:
+space complexity: O(nlogn)
 */
 func MergeSort(arr []int, p int, r int) {
 	if r-1 <= p {
@@ -21,10 +22,11 @@ func MergeSort(arr []int, p int, r int) {
 
 /*
 Merge merge the two sorted array arr[p, q) and arr[q, r)
+n=r-p
 worst time complexity: O(n)
 average time complexity: O(n)
 best time complexity: O(n)
-space complexity:
+space complexity: O(n)
 */
 func Merge(arr []int, p int, q int, r int) {
 	i := 0
@@ -58,31 +60,6 @@ func Merge(arr []int, p int, q int, r int) {
 			arr[p+i+j] = Y[j]
 			j++
 			continue
-		}
-	}
-}
-
-/*
-worst time complexity: O(n^2)
-average time complexity: O(n^2)
-best time complexity: O(1)
-
-space complexity: O(n)
-*/
-func InsertionSort(arr []int) {
-	n := len(arr)
-	if n == 1 {
-		return
-	}
-	for i := 1; i < n; i++ {
-		val := arr[i]
-		for j := i - 1; j > -1; j-- {
-			if arr[j] > val {
-				arr[j+1] = arr[j]
-				arr[j] = val
-			} else {
-				break
-			}
 		}
 	}
 }
