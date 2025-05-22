@@ -29,7 +29,7 @@ func BisectLeft(A []int, k int) int {
 
 /*
 Searches for the leftmost index of k in a sorted array A.
-If k is not found, returns -1.
+If k is not found, returns -1. pr
 */
 func BisectRight(A []int, k int) int {
 	if len(A) == 0 {

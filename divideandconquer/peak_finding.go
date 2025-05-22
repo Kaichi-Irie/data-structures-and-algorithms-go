@@ -1,4 +1,4 @@
-package binary
+package divideandconquer
 
 /*
 The Peak Finding Problem
