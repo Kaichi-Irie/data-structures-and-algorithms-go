@@ -28,10 +28,13 @@ func (uf *UnionFind) unite(x int, y int) {
 	// connect with rank
 	if uf.rank[x_root] < uf.rank[y_root] {
 		uf.parent[x_root] = y_root
-		uf.rank[y_root] += 1
+	} else if uf.rank[x_root] > uf.rank[y_root] {
+		uf.parent[y_root] = x_root
 	} else {
 		uf.parent[y_root] = x_root
-		uf.rank[x_root] += 1
+		// increment rank of x_root if they are equal
+		// this means we are connecting two trees of the same rank
+		uf.rank[x_root]++
 	}
 }
 
