@@ -1,5 +1,5 @@
 # about
-![Coverage](https://img.shields.io/badge/Coverage-89.3%25-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-91.1%25-brightgreen)
 
 このリポジトリは、[Introduction to Algorithms](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)などの内容をもとに，アルゴリズムやデータ構造をgo言語で実装したものです．
 
