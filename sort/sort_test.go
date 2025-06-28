@@ -132,3 +132,14 @@ func TestRandomizedQuickSort(t *testing.T) {
 		})
 	}
 }
+
+func TestHeapSort(t *testing.T) {
+	for _, test := range CreateTestCases() {
+		t.Run("HeapSort", func(t *testing.T) {
+			HeapSort(test.input)
+			if !reflect.DeepEqual(test.input, test.expected) {
+				t.Errorf("Expected %v, got %v", test.expected, test.input)
+			}
+		})
+	}
+}
